@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="seE-vM-C6m">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="FX7-AM-wwR">
+            <objects>
+                <viewController id="seE-vM-C6m" customClass="ViewController" customModule="UISlider2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WaJ-TU-vSa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="xcE-BL-bZR">
+                                <rect key="frame" x="28" y="45" width="358" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="seE-vM-C6m" eventType="valueChanged" id="R5Z-dF-TPg"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3D-iq-D9s">
+                                <rect key="frame" x="201.66666666666666" y="100" width="10.666666666666657" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k3D-iq-D9s" firstAttribute="top" secondItem="xcE-BL-bZR" secondAttribute="bottom" constant="25" id="1Gh-BU-nf1"/>
+                            <constraint firstItem="xcE-BL-bZR" firstAttribute="leading" secondItem="NZ8-q4-JxJ" secondAttribute="leading" constant="30" id="e3J-Rk-CRE"/>
+                            <constraint firstItem="NZ8-q4-JxJ" firstAttribute="trailing" secondItem="xcE-BL-bZR" secondAttribute="trailing" constant="30" id="n22-5y-vp6"/>
+                            <constraint firstItem="xcE-BL-bZR" firstAttribute="top" secondItem="NZ8-q4-JxJ" secondAttribute="top" constant="25" id="swI-sb-kaz"/>
+                            <constraint firstItem="k3D-iq-D9s" firstAttribute="centerX" secondItem="xcE-BL-bZR" secondAttribute="centerX" id="z0E-N9-nzh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NZ8-q4-JxJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbl" destination="k3D-iq-D9s" id="pA5-n8-bub"/>
+                        <outlet property="slider" destination="xcE-BL-bZR" id="T8K-Xp-BnW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aBB-1E-xdu" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
